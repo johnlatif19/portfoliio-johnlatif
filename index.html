@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="John Latif — Full Stack Developer Portfolio" />
+  <meta name="author" content="John Latif" />
+  <title>John Latif — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       PRELOADER
+       ============================================================ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-bg"></div>
+    <div class="aurora"></div>
+    <div class="stars-layer"></div>
+    <div class="stars-layer-2"></div>
+    <div class="grid-overlay"></div>
+    <div class="logo-glow"></div>
+
+    <div class="preloader-content">
+      <div class="logo-wrap">
+        <svg class="logo-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="logo-shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#f25f00" flood-opacity="0.3"/>
+            </filter>
+            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%"   stop-color="#ffb347"/>
+              <stop offset="50%"  stop-color="#f25f00"/>
+              <stop offset="100%" stop-color="#731d00"/>
+            </linearGradient>
+          </defs>
+          <g filter="url(#logo-shadow)">
+            <path class="logo-body-fill"
+              d="M 200,180 L 420,180 Q 440,180 440,200 L 440,440 Q 440,500 380,510 Q 320,520 260,500 Q 200,480 180,430 L 240,410 Q 255,445 290,455 Q 330,462 360,450 Q 380,440 380,420 L 380,240 L 200,240 Z"
+              fill="url(#logo-gradient)"/>
+            <path class="logo-body-stroke"
+              d="M 200,180 L 420,180 Q 440,180 440,200 L 440,440 Q 440,500 380,510 Q 320,520 260,500 Q 200,480 180,430 L 240,410 Q 255,445 290,455 Q 330,462 360,450 Q 380,440 380,420 L 380,240 L 200,240 Z"
+              fill="none" stroke="#ffb347" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="brand-wrap" dir="ltr">
+        <div class="glitch-red">JOHN</div>
+        <div class="glitch-cyan">JOHN</div>
+        <div class="glitch-line line-1"></div>
+        <div class="glitch-line line-2"></div>
+        <div class="glitch-line line-3"></div>
+
+        <h1 class="brand-text">
+          <span class="brand-letter"><span class="brand-base">J</span><span class="brand-fill">J</span></span>
+          <span class="brand-letter"><span class="brand-base">O</span><span class="brand-fill">O</span></span>
+          <span class="brand-letter"><span class="brand-base">H</span><span class="brand-fill">H</span></span>
+          <span class="brand-letter"><span class="brand-base">N</span><span class="brand-fill">N</span></span>
+        </h1>
+      </div>
+
+      <p class="subtitle">Full Stack Developer</p>
+    </div>
+
+    <div class="light-sweep"></div>
+    <div class="transition-wash"></div>
+    <div class="transition-sweep"></div>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#home" class="logo" aria-label="John Latif">
+          <svg class="logo-j" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-j-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stop-color="#ffb347"/>
+                <stop offset="50%"  stop-color="#f25f00"/>
+                <stop offset="100%" stop-color="#731d00"/>
+              </linearGradient>
+            </defs>
+            <path
+              d="M 200,180 L 420,180 Q 440,180 440,200 L 440,440 Q 440,500 380,510 Q 320,520 260,500 Q 200,480 180,430 L 240,410 Q 255,445 290,455 Q 330,462 360,450 Q 380,440 380,420 L 380,240 L 200,240 Z"
+              fill="url(#logo-j-grad)"/>
+          </svg>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#home"     class="nav-link active" data-section="home"     data-en="Home"     data-ar="الرئيسية">Home</a>
+          <a href="#about"    class="nav-link"        data-section="about"    data-en="About"    data-ar="عني">About</a>
+          <a href="#projects" class="nav-link"        data-section="projects" data-en="Projects" data-ar="أعمالي">Projects</a>
+          <a href="#skills"   class="nav-link"        data-section="skills"   data-en="Skills"   data-ar="مهاراتي">Skills</a>
+          <a href="#contact"  class="nav-link"        data-section="contact"  data-en="Contact"  data-ar="تواصل">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- ✅ الزر بيعرض اللغة اللي هتتحول لها -->
+          <button class="lang-btn" id="langBtn" aria-label="Switch language">
+            <span class="lang-text">AR</span>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#home"     data-en="Home"     data-ar="الرئيسية">Home</a>
+        <a href="#about"    data-en="About"    data-ar="عني">About</a>
+        <a href="#projects" data-en="Projects" data-ar="أعمالي">Projects</a>
+        <a href="#skills"   data-en="Skills"   data-ar="مهاراتي">Skills</a>
+        <a href="#contact"  data-en="Contact"  data-ar="تواصل">Contact</a>
+      </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-glow-2"></div>
+
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <p class="hero-greeting" data-en="Hi I am" data-ar="أهلاً، أنا">Hi I am</p>
+          <h1 class="hero-name">John Latif</h1>
+
+          <div class="hero-type">
+            <span class="text-type__content" id="typeContent">Web Developer</span>
+            <span class="text-type__cursor">|</span>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://wa.me/johnlatiff" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/john.latif.5815" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 448 512"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"/></svg>
+            </a>
+            <a href="tel:01274445091" aria-label="Phone">
+              <svg viewBox="0 0 512 512"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+            </a>
+            <a href="mailto:johnlatif37@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary" data-en="Contact Me" data-ar="تواصل معي">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-image-inner">
+            <div class="hero-image-shadow"></div>
+            <img src="https://i.ibb.co/G4nHVk6F/John.jpg" alt="John Latif" />
+            <div class="hero-inner-border"></div>
+            <span class="hero-hover-border hero-hover-border-top"></span>
+            <span class="hero-hover-border hero-hover-border-bottom"></span>
+            <span class="hero-hover-border hero-hover-border-left"></span>
+            <span class="hero-hover-border hero-hover-border-right"></span>
+
+            <div class="hero-badge">
+              <svg viewBox="0 0 576 512"><path fill="currentColor" d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 150.6 182.6c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+              <span data-en="Full Stack Developer" data-ar="مطور فل ستاك">Full Stack Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <p class="about-text"
+             data-en="I'm an ambitious person passionate about continuous learning and growth, always seeking new skills and turning knowledge into practical application. I love thinking differently, paying attention to details, and refining ideas to reach better outcomes. I believe in constant evolution, and I make sure every project I work on carries real value that reflects my skills and passion."
+             data-ar="أنا شخص طموح وشغوف بالتعلّم والتطوير المستمر، وأسعى دائمًا إلى اكتساب مهارات جديدة وتحويل المعرفة إلى تطبيق عملي. أحب التفكير بطريقة مختلفة، الاهتمام بالتفاصيل، وتطوير الأفكار للوصول إلى نتائج أفضل. أؤمن بأهمية التطور المستمر، وأحرص على أن يكون لكل مشروع أعمل عليه قيمة حقيقية تعكس مهاراتي وشغفي بما أقدمه.">
+            I'm an ambitious person passionate about continuous learning and growth...
+          </p>
+
+          <div class="about-tags">
+            <div class="tag-card">
+              <span class="tag-num">01</span>
+              <h3 data-en="Web Design" data-ar="تصميم الويب">Web Design</h3>
+            </div>
+            <div class="tag-card">
+              <span class="tag-num">02</span>
+              <h3 data-en="Structure" data-ar="بناء الهياكل">Structure</h3>
+            </div>
+            <div class="tag-card">
+              <span class="tag-num">03</span>
+              <h3 data-en="Interactive UX" data-ar="تجارب تفاعلية">Interactive UX</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <h2 class="section-title" data-en="Projects" data-ar="أعمالي">Projects</h2>
+          <p class="section-sub"
+             data-en="A collection of projects showcasing my skills and development style"
+             data-ar="مجموعة من المشاريع التي تعرض مهاراتي وأسلوبي في التطوير">
+            A collection of projects...
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-image">
+              <div class="project-num">01</div>
+              <div class="project-placeholder">
+                <svg viewBox="0 0 100 100" fill="none">
+                  <rect x="10" y="20" width="80" height="60" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="30" cy="40" r="6" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M10 65 L35 45 L60 65 L80 50 L90 60" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span data-en="Preview image" data-ar="صورة توضيحية">Preview image</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" data-en="Shulmith Gallery" data-ar="شولميث جاليري">Shulmith Gallery</h3>
+              <p class="project-desc"
+                 data-en="An art platform to showcase and sell paintings with custom materials and sizes, plus free art consultations."
+                 data-ar="منصة فنية لعرض وبيع اللوحات الفنية، مع إمكانية تنفيذ أي تابلوه بخامات وأحجام مختلفة حسب طلب العميل، وتقديم استشارات فنية مجانية.">
+                An art platform...
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span>
+              </div>
+              <a href="#" class="project-link">
+                <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image">
+              <div class="project-num">02</div>
+              <div class="project-placeholder">
+                <svg viewBox="0 0 100 100" fill="none">
+                  <rect x="20" y="15" width="60" height="70" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M30 30 H70 M30 45 H70 M30 60 H55" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span data-en="Preview image" data-ar="صورة توضيحية">Preview image</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" data-en="Dr. Mirna Pharmacy Points" data-ar="نظام نقاط لصيدلية د. ميرنا">Dr. Mirna Pharmacy Points</h3>
+              <p class="project-desc"
+                 data-en="A full loyalty points system for Dr. Mirna Pharmacy — earn points on every purchase and redeem exclusive rewards."
+                 data-ar="نظام متكامل لإدارة نقاط الولاء لعملاء صيدلية د. ميرنا، يتيح جمع النقاط مع كل عملية شراء واستبدالها بمكافآت وعروض حصرية.">
+                A full loyalty points system...
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span>
+              </div>
+              <a href="#" class="project-link">
+                <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image">
+              <div class="project-num">03</div>
+              <div class="project-placeholder">
+                <svg viewBox="0 0 100 100" fill="none">
+                  <circle cx="50" cy="40" r="14" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M30 80 C30 65 40 60 50 60 C60 60 70 65 70 80" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span data-en="Preview image" data-ar="صورة توضيحية">Preview image</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" data-en="Login System" data-ar="نظام تسجيل الدخول">Login System</h3>
+              <p class="project-desc"
+                 data-en="A simple, secure demo login system with a clean UI — sign in with username and password."
+                 data-ar="نظام تسجيل دخول تجريبي بسيط وآمن مع واجهة مستخدم نظيفة، يتيح للمستخدمين تسجيل الدخول باستخدام اسم المستخدم وكلمة المرور.">
+                A simple, secure demo login system...
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span>
+              </div>
+              <a href="#" class="project-link">
+                <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2 class="section-title" data-en="Skills" data-ar="مهاراتي">Skills</h2>
+          <p class="section-sub"
+             data-en="The tech I use to craft exceptional digital experiences"
+             data-ar="التقنيات التي أعمل بها لإنشاء تجارب رقمية استثنائية">
+            The tech I use...
+          </p>
+        </div>
+
+        <!-- Core Skills -->
+        <div class="skills-block">
+          <div class="skills-block-head">
+            <h3 data-en="Core Skills" data-ar="المهارات الأساسية">Core Skills</h3>
+            <p data-en="Everyday technologies I work with" data-ar="التقنيات الأساسية التي أعمل بها يومياً">Everyday technologies I work with</p>
+          </div>
+          <div class="skills-cards">
+
+            <div class="skill-card">
+              <div class="skill-icon" style="--brand:#e34c26;">
+                <svg viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
+              </div>
+              <span class="skill-name">HTML5</span>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon" style="--brand:#264de4;">
+                <svg viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg>
+              </div>
+              <span class="skill-name">CSS3</span>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon" style="--brand:#f7df1e;">
+                <svg viewBox="0 0 448 512"><path fill="currentColor" d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
+              </div>
+              <span class="skill-name">JavaScript</span>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon" style="--brand:#38bdf8;">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>
+              </div>
+              <span class="skill-name">Tailwind</span>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon" style="--brand:#ffffff;">
+                <svg viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+              </div>
+              <span class="skill-name">GitHub</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Back-End & Cloud -->
+        <div class="skills-block">
+          <div class="skills-block-head">
+            <h3 data-en="Back-End & Cloud" data-ar="الباك إند والسحابة">Back-End & Cloud</h3>
+            <p data-en="Server-side & cloud tools I work with" data-ar="أدوات السيرفر والسحابة التي أعمل بها">Server-side & cloud tools I work with</p>
+          </div>
+          <div class="skills-cards">
+
+            <div class="skill-card">
+              <div class="skill-icon" style="--brand:#539e43;">
+                <svg viewBox="0 0 448 512"><path fill="currentColor" d="M224 508c-6.7 0-13.5-1.8-19.4-5.2l-61.7-36.5c-9.2-5.2-4.7-7-1.7-8 12.3-4.3 14.8-5.2 27.9-12.7 1.4-.8 3.2-.5 4.6.4l47.4 28.1c1.7 1 4.1 1 5.7 0l184.7-106.6c1.7-1 2.8-3 2.8-5V149.3c0-2.1-1.1-4-2.9-5.1L226.8 37.7c-1.7-1-4-1-5.7 0L36.6 144.2c-1.8 1-2.9 3-2.9 5.1v213.1c0 2 1.1 4 2.9 4.9l50.6 29.2c27.5 13.7 44.3-2.4 44.3-18.7V165.2c0-3 2.4-5.4 5.4-5.4h23.4c3 0 5.4 2.4 5.4 5.4v212.6c0 37.1-20.2 58.3-55.3 58.3-10.8 0-19.3 0-43-11.7L15.2 400.9C5.7 395.4 0 384.9 0 373.8V160.7c0-11.1 5.7-21.5 15.2-26.9L199.9 27.2c9.2-5.2 21.5-5.2 30.7 0l184.7 106.6c9.5 5.5 15.2 15.9 15.2 26.9v213.1c0 11.1-5.7 21.5-15.2 26.9L230.6 506.7c-5.9 3.4-12.7 5.2-19.4 5.2z"/></svg>
+              </div>
+              <span class="skill-name">Node.js</span>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon" style="--brand:#ffffff;">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M24 18.588a1.529 1.529 0 0 1-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 0 1-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 0 1 1.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 0 1 1.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 0 0 0 .994l4.804 6.412zM.002 11.576l4.955-6.412a1.438 1.438 0 0 1 1.804-.705L2.74 11.04l3.477 4.74-3.47 4.729a1.424 1.424 0 0 1-1.79.687L5.532 11.53 1.86 7.086a.66.66 0 0 0-.11-.14z"/></svg>
+              </div>
+              <span class="skill-name">Express</span>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon" style="--brand:#ffca28;">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19.455 8.369c-.538-.748-1.778-2.285-3.681-4.569-.826-.991-1.535-1.832-1.884-2.245a146 146 0 0 0-.488-.576l-.207-.245-.113-.133-.022-.032-.01-.005L12.57 0l-.609.488c-1.555 1.246-2.828 2.851-3.681 4.64-.523 1.064-.864 2.105-1.043 3.176-.047.241-.088.489-.121.738-.209-.017-.421-.028-.632-.033-.018-.001-.035-.002-.059-.003a7.46 7.46 0 0 0-2.28.274l-.317.089-.163.286c-.765 1.342-1.198 2.869-1.252 4.416-.07 2.01.477 3.954 1.583 5.625 1.082 1.633 2.61 2.882 4.42 3.611l.236.095.071.025.003-.001a9.59 9.59 0 0 0 2.941.568q.171.006.342.006c1.273 0 2.513-.249 3.69-.742l.008.004.313-.145a9.63 9.63 0 0 0 3.927-3.335c1.01-1.49 1.577-3.234 1.641-5.042.075-2.161-.643-4.304-2.133-6.371m-7.083 6.695c.328 1.244.264 2.44-.191 3.558-1.135-1.12-1.967-2.352-2.475-3.665-.543-1.404-.87-2.74-.974-3.975.48.157.922.366 1.315.622 1.132.737 1.914 1.902 2.325 3.461z"/></svg>
+              </div>
+              <span class="skill-name">Firebase</span>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon" style="--brand:#3448c5;">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-3.04 16.757c-.605 0-1.13-.155-1.577-.466a3.145 3.145 0 0 1-1.07-1.294l1.359-.55c.162.317.384.56.665.728.281.168.593.252.935.252.414 0 .755-.111 1.023-.334.269-.222.403-.526.403-.911 0-.397-.144-.71-.433-.938-.29-.228-.673-.342-1.15-.342h-.55v-1.245h.508c.407 0 .736-.102.986-.306.25-.205.375-.49.375-.855 0-.325-.108-.583-.325-.775-.216-.193-.508-.29-.876-.29-.34 0-.615.09-.826.27-.211.18-.36.412-.445.697l-1.34-.51c.174-.55.485-1.005.933-1.365.447-.36.998-.54 1.653-.54.494 0 .94.098 1.336.293.396.196.706.464.929.805.222.342.334.723.334 1.144 0 .41-.097.766-.29 1.068-.192.302-.455.542-.787.72.397.17.712.427.946.77.234.344.351.756.351 1.235 0 .497-.117.94-.351 1.328-.234.389-.56.694-.977.916-.418.222-.895.333-1.432.333zm7.79-.333h-4.81v-1.297h1.679V8.617l-1.351.786-.677-1.123 2.306-1.328h1.555v8.175h1.298z"/></svg>
+              </div>
+              <span class="skill-name">Cloudinary</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <h2 class="section-title" data-en="Contact" data-ar="تواصل معي">Contact</h2>
+          <p class="section-sub"
+             data-en="Reach out through any of the channels below"
+             data-ar="يمكنك التواصل معي عبر أي من وسائل التواصل التالية">
+            Reach out through any of the channels below
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="contact-name" data-en="John Latif" data-ar="جون لطيف">John Latif</h3>
+            <p class="contact-role"
+               data-en="Full Stack Developer"
+               data-ar="مطور فل ستاك">
+              Full Stack Developer
+            </p>
+            <div class="contact-location">
+              <span class="dot"></span>
+              <span data-en="Egypt" data-ar="مصر">Egypt</span>
+            </div>
+          </div>
+
+          <div class="contact-cards">
+            <a href="tel:01274445091" class="contact-card">
+              <span class="contact-label" data-en="Phone" data-ar="الهاتف">Phone</span>
+              <span class="contact-value" dir="ltr">01274445091</span>
+              <span class="contact-arrow">↗</span>
+            </a>
+            <a href="https://wa.me/johnlatiff" target="_blank" rel="noopener" class="contact-card">
+              <span class="contact-label" data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+              <span class="contact-value" dir="ltr">wa.me/johnlatiff</span>
+              <span class="contact-arrow">↗</span>
+            </a>
+            <a href="https://www.facebook.com/john.latif.5815" target="_blank" rel="noopener" class="contact-card">
+              <span class="contact-label" data-en="Facebook" data-ar="فيسبوك">Facebook</span>
+              <span class="contact-value" dir="ltr">john.latif.5815</span>
+              <span class="contact-arrow">↗</span>
+            </a>
+            <a href="mailto:johnlatif37@gmail.com" class="contact-card">
+              <span class="contact-label" data-en="Email" data-ar="البريد">Email</span>
+              <span class="contact-value" dir="ltr">johnlatif37@gmail.com</span>
+              <span class="contact-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-cta">
+          <h2 data-en="Let's build something worth watching." data-ar="خلينا نبني حاجة تستحق إنها تتشاف.">
+            Let's build something worth watching.
+          </h2>
+        </div>
+        <div class="footer-bottom">
+          <span data-en="© 2026 John Latif. All rights reserved." data-ar="© 2026 جون لطيف. جميع الحقوق محفوظة.">© 2026 John Latif. All rights reserved.</span>
+          <span data-en="Built with care — no templates." data-ar="مبني بعناية — بدون قوالب جاهزة.">Built with care — no templates.</span>
+          <a href="#home" class="back-top">
+            <span data-en="↑ Back to top" data-ar="↑ للأعلى">↑ Back to top</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============ LANGUAGE SWITCH OVERLAY ============ -->
+  <div class="lang-overlay" id="langOverlay">
+    <div class="lang-overlay-inner">
+      <span class="lang-overlay-text" id="langOverlayText">EN</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
