@@ -114,7 +114,11 @@
      5. REVEAL (خفيف)
      ========================================================= */
   function initReveal() {
-    const els = $$('.reveal, .section-header, .skills-block, .about-grid > *, .projects-grid > *, .contact-grid > *, .footer-inner > *');
+    const els = $$(
+      '.reveal, .reveal-title, .skills-block, ' +
+      '.about-grid > *, .projects-grid > *, ' +
+      '.contact-grid > *, .footer-inner > *'
+    );
     if (!els.length) return;
 
     if (prefersReducedMotion) {
@@ -288,7 +292,6 @@
     const btn = $('#langBtn');
     if (!btn) return;
 
-    // ✅ ابدأ بالإنجليزي، والزر يعرض AR (اللي هتتحول له)
     applyLangInstant('en');
 
     btn.addEventListener('click', e => {
@@ -302,22 +305,18 @@
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-    // النصوص
     $$('[data-en][data-ar]').forEach(el => {
       const text = el.dataset[lang];
       if (text) el.textContent = text;
     });
 
-    // ✅ زر اللغة يعرض اللغة اللي هتتحول لها (عكس اللغة الحالية)
     const text = $('.lang-text');
     if (text) text.textContent = lang === 'ar' ? 'EN' : 'AR';
 
-    // العنوان
     document.title = lang === 'ar'
       ? 'جون لطيف — مطور فل ستاك'
       : 'John Latif — Full Stack Developer';
 
-    // Typewriter
     startTypewriter(lang);
   }
 
