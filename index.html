@@ -103,7 +103,6 @@
         </nav>
 
         <div class="nav-actions">
-          <!-- ✅ الزر بيعرض اللغة اللي هتتحول لها -->
           <button class="lang-btn" id="langBtn" aria-label="Switch language">
             <span class="lang-text">AR</span>
           </button>
@@ -179,31 +178,53 @@
     <!-- ============ ABOUT ============ -->
     <section id="about" class="section about">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal-title">
           <span class="section-num">01</span>
           <h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2>
         </div>
 
         <div class="about-grid">
-          <p class="about-text"
-             data-en="I'm an ambitious person passionate about continuous learning and growth, always seeking new skills and turning knowledge into practical application. I love thinking differently, paying attention to details, and refining ideas to reach better outcomes. I believe in constant evolution, and I make sure every project I work on carries real value that reflects my skills and passion."
-             data-ar="أنا شخص طموح وشغوف بالتعلّم والتطوير المستمر، وأسعى دائمًا إلى اكتساب مهارات جديدة وتحويل المعرفة إلى تطبيق عملي. أحب التفكير بطريقة مختلفة، الاهتمام بالتفاصيل، وتطوير الأفكار للوصول إلى نتائج أفضل. أؤمن بأهمية التطور المستمر، وأحرص على أن يكون لكل مشروع أعمل عليه قيمة حقيقية تعكس مهاراتي وشغفي بما أقدمه.">
-            I'm an ambitious person passionate about continuous learning and growth...
-          </p>
+          <div class="about-text-block">
+            <p class="about-text"
+               data-en="I am a Front-End Developer specialized in React.js, Next.js and modern web technologies, passionate about creating high-performance, scalable and visually engaging web applications."
+               data-ar="أنا مطور واجهة أمامية متخصص في React.js و Next.js وتقنيات الويب الحديثة، شغوف بإنشاء تطبيقات ويب عالية الأداء وقابلة للتوسع وجذابة بصريًا.">
+              I am a Front-End Developer specialized in React.js, Next.js and modern web technologies, passionate about creating high-performance, scalable and visually engaging web applications.
+            </p>
 
-          <div class="about-tags">
-            <div class="tag-card">
-              <span class="tag-num">01</span>
-              <h3 data-en="Web Design" data-ar="تصميم الويب">Web Design</h3>
+            <p class="about-text"
+               data-en="Combining strong technical skills with a background in Italian Language Studies, I bring analytical thinking, adaptability and effective communication to every team and environment."
+               data-ar="بدمج مهاراتي التقنية القوية مع خلفيتي في دراسة اللغة الإيطالية، أُضيف تفكيرًا تحليليًا وقدرة على التكيّف وتواصلًا فعّالًا لكل فريق وبيئة.">
+              Combining strong technical skills with a background in Italian Language Studies, I bring analytical thinking, adaptability and effective communication to every team and environment.
+            </p>
+
+            <p class="about-text"
+               data-en="My focus is building intuitive user experiences, writing clean maintainable code and continuously improving my skills to deliver modern digital solutions with real business value."
+               data-ar="تركيزي ينصب على بناء تجارب مستخدم بديهية، وكتابة كود نظيف وقابل للصيانة، وتطوير مهاراتي باستمرار لتقديم حلول رقمية حديثة ذات قيمة حقيقية.">
+              My focus is building intuitive user experiences, writing clean maintainable code and continuously improving my skills to deliver modern digital solutions with real business value.
+            </p>
+
+            <div class="about-tags">
+              <div class="tag-card">
+                <h3 data-en="React & Next.js" data-ar="React و Next.js">React & Next.js</h3>
+                <p data-en="Modern Front-End Development" data-ar="تطوير واجهات حديثة">Modern Front-End Development</p>
+              </div>
+              <div class="tag-card">
+                <h3 data-en="Responsive UI" data-ar="واجهات متجاوبة">Responsive UI</h3>
+                <p data-en="Mobile First Design Approach" data-ar="تصميم يبدأ من الموبايل">Mobile First Design Approach</p>
+              </div>
+              <div class="tag-card">
+                <h3 data-en="3 Languages" data-ar="3 لغات">3 Languages</h3>
+                <p data-en="Arabic • English • German" data-ar="العربية • الإنجليزية • الألمانية">Arabic • English • German</p>
+              </div>
+              <div class="tag-card">
+                <h3 data-en="Available" data-ar="متاح">Available</h3>
+                <p data-en="Open For Opportunities" data-ar="منفتح على الفرص">Open For Opportunities</p>
+              </div>
             </div>
-            <div class="tag-card">
-              <span class="tag-num">02</span>
-              <h3 data-en="Structure" data-ar="بناء الهياكل">Structure</h3>
-            </div>
-            <div class="tag-card">
-              <span class="tag-num">03</span>
-              <h3 data-en="Interactive UX" data-ar="تجارب تفاعلية">Interactive UX</h3>
-            </div>
+          </div>
+
+          <div class="about-image">
+            <img src="https://i.ibb.co/MkpPDY4X/Jo.jpg" alt="John Latif" />
           </div>
         </div>
       </div>
@@ -212,35 +233,28 @@
     <!-- ============ PROJECTS ============ -->
     <section id="projects" class="section projects">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal-title">
           <span class="section-num">02</span>
           <h2 class="section-title" data-en="Projects" data-ar="أعمالي">Projects</h2>
           <p class="section-sub"
              data-en="A collection of projects showcasing my skills and development style"
              data-ar="مجموعة من المشاريع التي تعرض مهاراتي وأسلوبي في التطوير">
-            A collection of projects...
+            A collection of projects showcasing my skills and development style
           </p>
         </div>
 
         <div class="projects-grid">
           <article class="project-card reveal">
             <div class="project-image">
+              <img src="https://i.postimg.cc/B6Tz00JP/shulamith-gallery.jpg" alt="Shulmith Gallery" loading="lazy" />
               <div class="project-num">01</div>
-              <div class="project-placeholder">
-                <svg viewBox="0 0 100 100" fill="none">
-                  <rect x="10" y="20" width="80" height="60" rx="4" stroke="currentColor" stroke-width="1.5"/>
-                  <circle cx="30" cy="40" r="6" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M10 65 L35 45 L60 65 L80 50 L90 60" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-                <span data-en="Preview image" data-ar="صورة توضيحية">Preview image</span>
-              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title" data-en="Shulmith Gallery" data-ar="شولميث جاليري">Shulmith Gallery</h3>
               <p class="project-desc"
                  data-en="An art platform to showcase and sell paintings with custom materials and sizes, plus free art consultations."
                  data-ar="منصة فنية لعرض وبيع اللوحات الفنية، مع إمكانية تنفيذ أي تابلوه بخامات وأحجام مختلفة حسب طلب العميل، وتقديم استشارات فنية مجانية.">
-                An art platform...
+                An art platform to showcase and sell paintings with custom materials and sizes, plus free art consultations.
               </p>
               <div class="project-tags">
                 <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span>
@@ -254,21 +268,15 @@
 
           <article class="project-card reveal">
             <div class="project-image">
+              <img src="https://i.postimg.cc/mrMXYszD/points-dr-mirna.jpg" alt="Dr. Mirna Pharmacy Points" loading="lazy" />
               <div class="project-num">02</div>
-              <div class="project-placeholder">
-                <svg viewBox="0 0 100 100" fill="none">
-                  <rect x="20" y="15" width="60" height="70" rx="4" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M30 30 H70 M30 45 H70 M30 60 H55" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-                <span data-en="Preview image" data-ar="صورة توضيحية">Preview image</span>
-              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title" data-en="Dr. Mirna Pharmacy Points" data-ar="نظام نقاط لصيدلية د. ميرنا">Dr. Mirna Pharmacy Points</h3>
               <p class="project-desc"
                  data-en="A full loyalty points system for Dr. Mirna Pharmacy — earn points on every purchase and redeem exclusive rewards."
                  data-ar="نظام متكامل لإدارة نقاط الولاء لعملاء صيدلية د. ميرنا، يتيح جمع النقاط مع كل عملية شراء واستبدالها بمكافآت وعروض حصرية.">
-                A full loyalty points system...
+                A full loyalty points system for Dr. Mirna Pharmacy — earn points on every purchase and redeem exclusive rewards.
               </p>
               <div class="project-tags">
                 <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span>
@@ -282,21 +290,15 @@
 
           <article class="project-card reveal">
             <div class="project-image">
+              <img src="https://i.postimg.cc/6QRjrX2h/login.jpg" alt="Login System" loading="lazy" />
               <div class="project-num">03</div>
-              <div class="project-placeholder">
-                <svg viewBox="0 0 100 100" fill="none">
-                  <circle cx="50" cy="40" r="14" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M30 80 C30 65 40 60 50 60 C60 60 70 65 70 80" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-                <span data-en="Preview image" data-ar="صورة توضيحية">Preview image</span>
-              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title" data-en="Login System" data-ar="نظام تسجيل الدخول">Login System</h3>
               <p class="project-desc"
                  data-en="A simple, secure demo login system with a clean UI — sign in with username and password."
                  data-ar="نظام تسجيل دخول تجريبي بسيط وآمن مع واجهة مستخدم نظيفة، يتيح للمستخدمين تسجيل الدخول باستخدام اسم المستخدم وكلمة المرور.">
-                A simple, secure demo login system...
+                A simple, secure demo login system with a clean UI — sign in with username and password.
               </p>
               <div class="project-tags">
                 <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span>
@@ -314,17 +316,16 @@
     <!-- ============ SKILLS ============ -->
     <section id="skills" class="section skills">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal-title">
           <span class="section-num">03</span>
           <h2 class="section-title" data-en="Skills" data-ar="مهاراتي">Skills</h2>
           <p class="section-sub"
              data-en="The tech I use to craft exceptional digital experiences"
              data-ar="التقنيات التي أعمل بها لإنشاء تجارب رقمية استثنائية">
-            The tech I use...
+            The tech I use to craft exceptional digital experiences
           </p>
         </div>
 
-        <!-- Core Skills -->
         <div class="skills-block">
           <div class="skills-block-head">
             <h3 data-en="Core Skills" data-ar="المهارات الأساسية">Core Skills</h3>
@@ -370,7 +371,6 @@
           </div>
         </div>
 
-        <!-- Back-End & Cloud -->
         <div class="skills-block">
           <div class="skills-block-head">
             <h3 data-en="Back-End & Cloud" data-ar="الباك إند والسحابة">Back-End & Cloud</h3>
@@ -414,7 +414,7 @@
     <!-- ============ CONTACT ============ -->
     <section id="contact" class="section contact">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal-title">
           <span class="section-num">04</span>
           <h2 class="section-title" data-en="Contact" data-ar="تواصل معي">Contact</h2>
           <p class="section-sub"
@@ -446,12 +446,12 @@
             </a>
             <a href="https://wa.me/johnlatiff" target="_blank" rel="noopener" class="contact-card">
               <span class="contact-label" data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
-              <span class="contact-value" dir="ltr">wa.me/johnlatiff</span>
+              <span class="contact-value" dir="ltr">johnlatif</span>
               <span class="contact-arrow">↗</span>
             </a>
             <a href="https://www.facebook.com/john.latif.5815" target="_blank" rel="noopener" class="contact-card">
               <span class="contact-label" data-en="Facebook" data-ar="فيسبوك">Facebook</span>
-              <span class="contact-value" dir="ltr">john.latif.5815</span>
+              <span class="contact-value" dir="ltr">John Latif</span>
               <span class="contact-arrow">↗</span>
             </a>
             <a href="mailto:johnlatif37@gmail.com" class="contact-card">
@@ -467,7 +467,7 @@
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
       <div class="container footer-inner">
-        <div class="footer-cta">
+        <div class="footer-cta reveal-title">
           <h2 data-en="Let's build something worth watching." data-ar="خلينا نبني حاجة تستحق إنها تتشاف.">
             Let's build something worth watching.
           </h2>
