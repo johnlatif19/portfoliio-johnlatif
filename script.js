@@ -1,8 +1,3 @@
-/* ============================================================
-   JOHN LATIF — PORTFOLIO
-   script.js
-   ============================================================ */
-
 (function () {
   'use strict';
 
@@ -10,9 +5,6 @@
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* =========================================================
-     1. PRELOADER
-     ========================================================= */
   function initPreloader() {
     const preloader = $('#preloader');
     const main = $('#mainContent');
@@ -35,9 +27,6 @@
     }, TOTAL);
   }
 
-  /* =========================================================
-     2. NAVBAR
-     ========================================================= */
   function initNavbar() {
     const navbar = $('#navbar');
     const navLinks = $$('.nav-link');
@@ -70,9 +59,6 @@
     }, { passive: true });
   }
 
-  /* =========================================================
-     3. MOBILE MENU
-     ========================================================= */
   function initMobileMenu() {
     const toggle = $('#menuToggle');
     const menu = $('#mobileMenu');
@@ -91,9 +77,6 @@
     });
   }
 
-  /* =========================================================
-     4. SMOOTH SCROLL
-     ========================================================= */
   function initSmoothScroll() {
     $$('a[href^="#"]').forEach(link => {
       link.addEventListener('click', e => {
@@ -110,9 +93,6 @@
     });
   }
 
-  /* =========================================================
-     5. REVEAL (خفيف)
-     ========================================================= */
   function initReveal() {
     const els = $$(
       '.reveal, .reveal-title, .skills-block, ' +
@@ -141,9 +121,6 @@
     els.forEach(el => observer.observe(el));
   }
 
-  /* =========================================================
-     6. TYPEWRITER
-     ========================================================= */
   const TYPE_ROLES = {
     en: ['Web Developer', 'Full Stack Developer'],
     ar: ['مطور ويب', 'مطور فل ستاك']
@@ -184,9 +161,6 @@
     loop();
   }
 
-  /* =========================================================
-     7. PARALLAX
-     ========================================================= */
   function initParallax() {
     if (prefersReducedMotion) return;
 
@@ -209,9 +183,6 @@
     }, { passive: true });
   }
 
-  /* =========================================================
-     8. HERO IMAGE 3D TILT
-     ========================================================= */
   function initHeroTilt() {
     if (prefersReducedMotion) return;
 
@@ -232,9 +203,6 @@
     });
   }
 
-  /* =========================================================
-     9. BACK TO TOP
-     ========================================================= */
   function initBackToTop() {
     const btn = document.createElement('button');
     btn.className = 'back-to-top-floating';
@@ -283,9 +251,6 @@
     });
   }
 
-  /* =========================================================
-     10. LANGUAGE TOGGLE
-     ========================================================= */
   let currentLang = 'en';
 
   function initLangToggle() {
@@ -353,9 +318,6 @@
     }, 750);
   }
 
-  /* =========================================================
-     11. EXTERNAL LINKS
-     ========================================================= */
   function initExternalLinks() {
     $$('a[href^="http"]').forEach(link => {
       if (!link.hostname || link.hostname === window.location.hostname) return;
@@ -364,9 +326,6 @@
     });
   }
 
-  /* =========================================================
-     12. INIT
-     ========================================================= */
   function init() {
     initPreloader();
     initNavbar();
